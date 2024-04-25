@@ -1,3 +1,4 @@
+import 'package:dibry_app/app/components/customImageCarousel.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -65,22 +66,24 @@ class HomeView extends GetView<HomeController> {
                     height: height * 0.030,
                   ),
 
-                  InkWell(
-                    onTap: (){
-                      Get.toNamed(Routes.HISTORYPEMINJAMAN);
-                    },
-                    child: SizedBox(
-                      width: width,
-                      height: 200,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'assets/images/konten_home.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
+                  // InkWell(
+                  //   onTap: (){
+                  //     Get.toNamed(Routes.BUKUPAGE);
+                  //   },
+                  //   child: SizedBox(
+                  //     width: width,
+                  //     height: 200,
+                  //     child: ClipRRect(
+                  //       borderRadius: BorderRadius.circular(10),
+                  //       child: Image.asset(
+                  //         'assets/images/konten_home.png',
+                  //         fit: BoxFit.cover,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+
+                  CustomImageCarousel(),
 
                   SizedBox(
                     height: height * 0.025,

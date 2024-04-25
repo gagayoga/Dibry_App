@@ -15,13 +15,26 @@ class HistorypeminjamanView extends GetView<HistorypeminjamanController> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        titleSpacing: -5,
+        toolbarHeight: 50,
+        titleSpacing: 0,
+        leading: SizedBox(
+          width: 25,
+          height: 25,
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Image.asset(
+              "assets/logo/icon_back.png",
+              width: 20,
+              height: 20,
+            ),
+          ),
+        ),
         title: SizedBox(
           width: width,
           child: Text(
             'History Peminjaman Buku',
             style: GoogleFonts.poppins(
-              fontSize: 20,
+              fontSize: 18,
               color: Colors.black,
               fontWeight: FontWeight.w600,
             ),

@@ -237,7 +237,7 @@ class BukupageView extends GetView<BukupageController> {
         crossAxisCount: 2,
         crossAxisSpacing: 10.0,
         mainAxisSpacing: 10.0,
-        childAspectRatio: 4 / 7,
+        childAspectRatio: 4 / 7.3,
       ),
       itemCount: controller.dataAllBook.length,
       itemBuilder: (context, index) {

@@ -3,6 +3,7 @@ import 'package:dibry_app/app/modules/bukupage/controllers/bukupage_controller.d
 import 'package:dibry_app/app/modules/historypeminjaman/controllers/historypeminjaman_controller.dart';
 import 'package:dibry_app/app/modules/historypeminjaman/views/historypeminjaman_view.dart';
 import 'package:dibry_app/app/modules/home/controllers/home_controller.dart';
+import 'package:dibry_app/app/modules/profile/controllers/profile_controller.dart';
 import 'package:get/get.dart';
 
 import '../controllers/dashboard_controller.dart';
@@ -28,6 +29,10 @@ class DashboardBinding extends Bindings {
 
     Get.lazyPut<HistorypeminjamanController>(
           () => HistorypeminjamanController(),
+    );
+
+    Get.lazyPut<ProfileController>(
+          () => ProfileController(),
     );
   }
 }

@@ -1,57 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconsax/iconsax.dart';
 
 class CustomBottomBarMaterial extends StatelessWidget {
-  final Color colorIcon = const Color(0xFFFFFFFF);
-  final Color colorSelect = const Color(0xFFEA1818);
-  final Color colorBackground = const Color(0xFF1B1B1D);
   final int currentIndex;
   final Function(int) onTap;
 
   const CustomBottomBarMaterial({
-    Key? key,
+    super.key,
     required this.currentIndex,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
+    const Color backgroundColor = Color(0xFFFFFFFF);
+    const Color primaryColor = Color(0xFFFFAE7A);
+
     return BottomNavigationBar(
-      unselectedItemColor: colorIcon,
-      selectedItemColor: colorSelect,
+      unselectedItemColor: Colors.grey,
+      selectedItemColor: primaryColor,
       onTap: onTap,
       currentIndex: currentIndex,
       showSelectedLabels: true,
       type: BottomNavigationBarType.fixed,
-      backgroundColor: colorBackground,
+      backgroundColor: backgroundColor,
       elevation: 0,
-      selectedFontSize: 16,
-      selectedLabelStyle: GoogleFonts.inriaSans(
-        fontWeight: FontWeight.w700,
+      selectedFontSize: 12,
+      selectedLabelStyle: GoogleFonts.montserrat(
+          fontWeight: FontWeight.w700,
       ),
-      iconSize: 26,
-      showUnselectedLabels: false,
+      iconSize: 28,
+      showUnselectedLabels: true,
       items: [
         _bottomNavigationBarItem(
-          icon: Icons.house_rounded,
+          icon: Iconsax.home5,
           label: 'Home',
         ),
         _bottomNavigationBarItem(
-          icon: Icons.explore,
-          label: 'Explore',
+          icon: Iconsax.book4,
+          label: 'Bookmarks',
         ),
         _bottomNavigationBarItem(
-          icon: null, // Gunakan null untuk ikon agar menjadi bagian tengah dengan latar belakang
-          label: 'Activity',
+          icon: null,
+          label: '',
         ),
         _bottomNavigationBarItem(
-          icon: Icons.person_2_rounded,
+          icon: Iconsax.clock5,
+          label: 'History',
+        ),
+        _bottomNavigationBarItem(
+          icon: Iconsax.profile_circle5,
           label: 'Profile',
         ),
       ],
     );
   }
-
   BottomNavigationBarItem _bottomNavigationBarItem({
     required IconData? icon,
     required String label,
@@ -62,19 +67,21 @@ class CustomBottomBarMaterial extends StatelessWidget {
         label: label,
       );
     } else {
-      // Custom item for centered icon with background
       return BottomNavigationBarItem(
         icon: Container(
-          width: 56, // Lebar ikon
-          height: 56, // Tinggi ikon
-          decoration: BoxDecoration(
+          width: 50,
+          height: 50,
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.blue, // Warna latar belakang biru
+            color: Color(0xFFFFAE7A),
           ),
-          child: Icon(
-            Icons.local_activity,
-            size: 32, // Ukuran ikon di dalam latar belakang
-            color: colorSelect, // Warna ikon aktif
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: SvgPicture.asset(
+              'assets/logo/logo.svg',
+              width: 30,
+              height: 30,
+            ),
           ),
         ),
         label: label,

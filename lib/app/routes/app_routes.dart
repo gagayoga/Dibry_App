@@ -14,6 +14,7 @@ abstract class Routes {
   static const VIEWPROFILE = _Paths.VIEWPROFILE;
   static const CHANGEPASSWORD = _Paths.CHANGEPASSWORD;
   static const DASHBOARD = _Paths.DASHBOARD;
+  static const PROFILE = _Paths.PROFILE;
 }
 
 abstract class _Paths {
@@ -29,4 +30,5 @@ abstract class _Paths {
   static const VIEWPROFILE = '/viewprofile';
   static const CHANGEPASSWORD = '/changepassword';
   static const DASHBOARD = '/dashboard';
+  static const PROFILE = '/profile';
 }
