@@ -24,7 +24,7 @@ class SplashscreenView extends GetView<SplashscreenController> {
       String? status = StorageProvider.read(StorageKey.status);
 
       if (status == "logged") {
-        Get.offAllNamed(Routes.HOME);
+        Get.offAllNamed(Routes.DASHBOARD);
       }else{
         Get.offAllNamed(Routes.LOGIN);
       }

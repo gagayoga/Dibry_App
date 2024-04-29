@@ -93,6 +93,8 @@ class BukupageView extends GetView<BukupageController> {
     return Obx((){
       if(controller.searchController.text == ''){
         return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -125,10 +127,6 @@ class BukupageView extends GetView<BukupageController> {
                           'Komputer'
                       ),
 
-                      kategoriBuku(
-                          'assets/kategori/kategori3.svg',
-                          'Novel'
-                      ),
 
                       kategoriBuku(
                           'assets/kategori/kategori4.svg',

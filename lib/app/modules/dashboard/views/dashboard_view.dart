@@ -21,8 +21,8 @@ class DashboardView extends StatelessWidget{
             index: controller.tabIndex,
             children: const [
               HomeView(),
-              BukupageView(),
               BookmarkView(),
+              BukupageView(),
               HistorypeminjamanView(),
               ProfileView(),
             ],

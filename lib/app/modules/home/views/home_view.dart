@@ -225,7 +225,7 @@ class HomeView extends GetView<HomeController> {
   // Konten Buku Terbaru
   Widget kontenBukuTerbaru(){
     return SizedBox(
-      height: 205,
+      height: 210,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -323,7 +323,7 @@ class HomeView extends GetView<HomeController> {
       child: Padding(
         padding: const EdgeInsets.only(left: 15),
         child: SizedBox(
-          height: 205,
+          height: 215,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: itemCount,
